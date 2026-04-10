@@ -196,23 +196,8 @@
     line-height: 40px;
   }
 
-  .claim-strip-act {
-    font-size: 34px;
-    line-height: 44px;
-  }
-
-  .claim-strip-act .claim-timer.stopwatch {
-    font-size: 52px;
-  }
-
-  /* Status strip */
-  .status-strip-list li {
+  .claim-strip-sub {
     font-size: 16px;
-    padding: 0 14px;
-  }
-
-  .status-strip-list li:last-child {
-    display: none;
   }
 }
 
@@ -308,6 +293,15 @@
     font-size: 44px;
   }
 
+  .combo-ebooks img {
+    height: 48px;
+  }
+
+  .combo-badge {
+    font-size: 10px;
+    padding: 2px 10px;
+  }
+
   /* Ingredients single col */
   .ingredients-grid {
     gap: 22px;
@@ -363,11 +357,6 @@
   .faq-question {
     font-size: 16px;
     padding: 15px 45px 15px 15px;
-  }
-
-  /* Stopwatch */
-  .stopwatch {
-    font-size: 40px;
   }
 
   /* Guarantee */
@@ -459,25 +448,9 @@
     line-height: 36px;
   }
 
-  .claim-strip-act {
-    font-size: 30px;
-    line-height: 38px;
-  }
-
-  .claim-strip-act .claim-timer.stopwatch {
-    font-size: 42px;
-    letter-spacing: 3px;
-  }
-
-  /* Status strip */
-  .status-strip-list li {
+  .claim-strip-sub {
     font-size: 14px;
-    line-height: 22px;
-    padding: 0 12px;
-  }
-
-  .status-strip-list li:last-child {
-    display: none;
+    letter-spacing: 1px;
   }
 
   /* Footer */
@@ -554,10 +527,13 @@
     width: 90px;
   }
 
-  /* Stopwatch */
-  .stopwatch {
-    font-size: 36px;
-    letter-spacing: 1px;
+  .combo-ebooks img {
+    height: 40px;
+  }
+
+  .combo-badge {
+    font-size: 9px;
+    padding: 2px 8px;
   }
 
   /* Price */

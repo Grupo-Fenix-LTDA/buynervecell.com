@@ -205,7 +205,7 @@ ul.menu li:last-child a:hover {
   text-align: center;
   border: none;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
   box-shadow: 0 5px 0 #0d0a2a;
   font-family: var(--font-family);
   line-height: 1.3;
@@ -213,7 +213,9 @@ ul.menu li:last-child a:hover {
 }
 
 .btn-primary:hover {
-  background: #2a1a5c;
+  background: var(--color-royal-purple);
+  box-shadow: 0 5px 0 #3a2272, 0 8px 24px rgba(75, 46, 140, 0.3);
+  transform: scale(1.045);
 }
 
 .btn-primary:active {
@@ -238,26 +240,55 @@ ul.menu li:last-child a:hover {
 
 .pricing-card {
   background: #fff;
-  border: 1px solid #ccc;
+  border: 2px solid #ddd;
+  border-radius: 16px;
   padding: 0;
-  overflow: visible;
+  overflow: hidden;
   position: relative;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.35s ease;
 }
 
 .pricing-card:hover {
-  transform: none;
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(6, 147, 227, 0.2);
+  border-color: #0693e3;
+}
+
+.pricing-card:hover .pricing-img {
+  transform: scale(1.04);
+}
+
+.pricing-img {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .pricing-card.featured {
-  border: 3px solid #181042;
+  border: 3px solid #fcb900;
+  border-radius: 16px;
   z-index: 2;
-  box-shadow: 0 10px 40px rgba(24,16,66,0.22);
+  box-shadow:
+    0 10px 40px rgba(24, 16, 66, 0.22),
+    0 0 0 4px rgba(252, 185, 0, 0.2);
   animation: none;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.35s ease;
+}
+
+.pricing-card.featured:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 50px rgba(252, 185, 0, 0.25),
+    0 0 0 6px rgba(252, 185, 0, 0.3),
+    0 0 30px rgba(252, 185, 0, 0.2);
+  border-color: #e0a800;
 }
 
 .pricing-card-label {
-  background: #e8e8e8;
-  color: #181042;
+  background: #0693e3;
+  color: #fff;
   text-align: center;
   padding: 12px 0;
   font-size: 13px;
@@ -267,8 +298,8 @@ ul.menu li:last-child a:hover {
 }
 
 .pricing-card-label.featured-label {
-  background: #181042;
-  color: #fff;
+  background: #fcb900;
+  color: #181042;
   font-size: 14px;
   padding: 14px 0;
   letter-spacing: 2px;
@@ -384,16 +415,60 @@ ul.menu li:last-child a:hover {
   background: none;
 }
 
-.check-icon {
+svg.check-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: #181042;
+}
+
+.check-disabled {
+  color: #aaa;
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.x-icon {
   font-weight: 700;
   font-size: 14px;
   flex-shrink: 0;
-  width: auto;
-  height: auto;
-  background: none;
-  border-radius: 0;
   display: inline;
+  color: #c62828;
+}
+
+/* Pricing card CTA buttons — blue for 1 & 3 bottles */
+.pricing-card .btn-primary {
+  background: linear-gradient(135deg, #0693e3, #0574b8);
+  color: #fff;
+  box-shadow: 0 5px 0 #045a91;
+  border-radius: 8px;
+}
+
+.pricing-card .btn-primary:hover {
+  background: linear-gradient(135deg, #1da1f2, #0693e3);
+  box-shadow: 0 5px 0 #045a91, 0 8px 24px rgba(6, 147, 227, 0.35);
+  color: #fff;
+}
+
+.pricing-card .btn-primary:active {
+  box-shadow: 0 2px 0 #045a91;
+}
+
+/* Featured card CTA — gold for 6 bottles */
+.pricing-card.featured .btn-primary {
+  background: linear-gradient(135deg, #fcb900, #e0a800);
   color: #181042;
+  box-shadow: 0 5px 0 #b8870a;
+}
+
+.pricing-card.featured .btn-primary:hover {
+  background: linear-gradient(135deg, #ffc929, #fcb900);
+  box-shadow: 0 5px 0 #b8870a, 0 8px 24px rgba(252, 185, 0, 0.35);
+  color: #181042;
+}
+
+.pricing-card.featured .btn-primary:active {
+  box-shadow: 0 2px 0 #b8870a;
 }
 
 .pricing-btn-wrapper {
@@ -408,6 +483,61 @@ ul.menu li:last-child a:hover {
 
 .cursor-click-anim {
   display: none;
+}
+
+/* Product image + bonus ebooks — product-shot composition */
+.pricing-img-combo {
+  position: relative;
+  margin: 15px auto 0;
+  width: 100%;
+  min-height: 180px;
+}
+
+.pricing-img-combo .pricing-img {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  height: 170px;
+}
+
+.combo-ebooks {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.combo-ebooks-row {
+  display: flex;
+  gap: 0;
+}
+
+.combo-ebooks-row img:last-child {
+  margin-left: -8px;
+}
+
+.combo-ebooks img {
+  display: block;
+  height: 55px;
+  width: auto;
+}
+
+.combo-badge {
+  display: inline-block;
+  margin-top: -6px;
+  padding: 3px 12px;
+  background: #fcb900;
+  color: #181042;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(252, 185, 0, 0.35);
 }
 
 .pricing-cards-img {
@@ -630,129 +760,15 @@ ul.menu li:last-child a:hover {
   color: var(--color-pure-white);
 }
 
-.claim-strip-act {
-  font-weight: 900;
-  font-size: 42px;
-  line-height: 52px;
-  color: #fff000;
-  margin-top: 5px;
-}
-
-.claim-strip-act .claim-timer.stopwatch {
-  font-size: 64px;
-  font-weight: 900;
-  color: #fff000;
-  letter-spacing: 4px;
-  font-variant-numeric: tabular-nums;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-  display: inline-block;
-}
-
-.claim-act-text {
-  animation: act-now-pulse 0.6s ease-in-out infinite alternate;
-}
-
-@keyframes act-now-pulse {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.05); }
-}
-
-/* ==========================================================================
-   STATUS STRIP (Sale Status / Stock Level / Spot Reserved)
-   ========================================================================== */
-
-.status-strip {
-  padding: 18px 0;
-  color: var(--color-pure-white);
-  background: linear-gradient(to right, var(--color-deep-indigo), #2a1660, var(--color-deep-indigo));
-}
-
-.status-strip-list {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-
-.status-strip-list li {
-  padding: 0 22px;
-  position: relative;
+.claim-strip-sub {
   font-size: 18px;
-  line-height: 28px;
-  color: var(--color-pure-white);
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  font-weight: 600;
+  color: var(--color-soft-lavender);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
 }
 
-.status-strip-list li::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 6px;
-  height: 18px;
-  width: 1px;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.status-strip-list li:last-child::after {
-  display: none;
-}
-
-/* Green dot for Sale Status */
-.status-dot {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #11b142;
-  margin-right: 4px;
-  animation: pulse-dot 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
-}
-
-/* Hourglass icon with rotation */
-.hourglass-icon {
-  display: inline-block;
-  font-size: 18px;
-  animation: rotate-hourglass 2.5s ease-in-out infinite;
-}
-
-@keyframes rotate-hourglass {
-  0% { transform: rotate(0deg); }
-  40% { transform: rotate(180deg); }
-  100% { transform: rotate(180deg); }
-}
-
-.clock-icon {
-  font-size: 18px;
-}
-
-/* Stopwatch timer */
-.stopwatch {
-  font-size: 18px;
-  font-weight: 900;
-  color: #fff000;
-  font-variant-numeric: tabular-nums;
-}
-
-/* Blink animation for LOW */
-.blink {
-  color: #ff4444;
-  font-weight: 700;
-  animation: blink 1.5s infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
 
 /* ==========================================================================
    FOOTER
