@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Nervecell Design System - CSS Custom Properties
+   ========================================================================== */
+
+:root {
+  /* ---- Core Colors ---- */
+  --color-deep-indigo: #181042;
+  --color-royal-purple: #4B2E8C;
+  --color-soft-lavender: #C2A8E2;
+  --color-pearl-silver: #C5CBD5;
+  --color-off-white: #F5F5F8;
+  --color-pure-white: #FFFFFF;
+
+  /* ---- Gradients ---- */
+  --gradient-hero: linear-gradient(135deg, #181042 0%, #4B2E8C 100%);
+  --gradient-highlight: linear-gradient(to right, #4B2E8C, #C2A8E2);
+
+  /* ---- Typography ---- */
+  --font-family: "Inter", sans-serif;
+
+  /* ---- Layout ---- */
+  --container-width: 1170px;
+  --section-padding: 60px 0;
+
+  /* ---- Buttons ---- */
+  --btn-bg: var(--color-royal-purple);
+  --btn-text: var(--color-pure-white);
+  --btn-radius: 6px;
+
+  /* ---- Spacing Tokens ---- */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-30: 30px;
+  --space-40: 40px;
+  --space-50: 50px;
+  --space-60: 60px;
+  --space-80: 80px;
+}

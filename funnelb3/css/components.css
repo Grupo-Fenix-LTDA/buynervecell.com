@@ -1,0 +1,822 @@
+/* ==========================================================================
+   Nervecell - Reusable Component Styles
+   ========================================================================== */
+
+/* ==========================================================================
+   HEADER / NAVIGATION
+   ========================================================================== */
+
+.header {
+  padding: 13px 0;
+  background: var(--color-pure-white);
+  position: relative;
+  z-index: 1000;
+  border-bottom: 1px solid var(--color-pearl-silver);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--color-deep-indigo);
+  font-weight: 800;
+  font-size: 28px;
+  text-decoration: none;
+  line-height: 40px;
+  flex-shrink: 0;
+}
+
+.logo span {
+  color: var(--color-royal-purple);
+}
+
+ul.menu {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+}
+
+ul.menu li {
+  display: inline-block;
+  padding: 0 17px;
+  font-size: 18px;
+  line-height: 40px;
+  color: var(--color-deep-indigo);
+  position: relative;
+}
+
+ul.menu li a {
+  color: var(--color-deep-indigo);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+ul.menu li a:hover {
+  color: var(--color-royal-purple);
+}
+
+ul.menu li::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  background: var(--color-pearl-silver);
+}
+
+ul.menu li:nth-last-child(2)::after,
+ul.menu li:last-child::after {
+  display: none;
+}
+
+ul.menu li:last-child {
+  padding: 0;
+  margin-left: 8px;
+}
+
+ul.menu li:last-child a {
+  display: inline-block;
+  background: var(--color-royal-purple);
+  color: var(--color-pure-white);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 8px 22px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: background 0.3s;
+  box-shadow: none;
+  line-height: 24px;
+}
+
+ul.menu li:last-child a:hover {
+  background: #5a3a9c;
+  color: var(--color-pure-white);
+}
+
+/* Hamburger Menu Toggle */
+#menu-wrapper {
+  cursor: pointer;
+  margin-left: auto;
+}
+
+#hamburger-menu {
+  width: 30px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+}
+
+#hamburger-menu span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--color-deep-indigo);
+  border-radius: 3px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+#hamburger-menu span:nth-child(1) {
+  top: 0;
+}
+
+#hamburger-menu span:nth-child(2) {
+  top: 10px;
+}
+
+#hamburger-menu span:nth-child(3) {
+  top: 20px;
+}
+
+#hamburger-menu.open span:nth-child(1) {
+  top: 10px;
+  transform: rotate(45deg);
+}
+
+#hamburger-menu.open span:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger-menu.open span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+
+/* Mobile Menu */
+#menu-container {
+  position: static;
+}
+
+#menu-container .menu-list {
+  position: absolute;
+  left: -100%;
+  top: 100%;
+  width: 100%;
+  background: var(--color-deep-indigo);
+  z-index: 999;
+  transition: left 0.3s ease;
+  padding: 10px 0;
+}
+
+.menu-list.active {
+  left: 0;
+}
+
+.menu-list li {
+  display: block;
+  padding: 0;
+}
+
+.menu-list li a {
+  display: block;
+  color: var(--color-pure-white);
+  font-size: 16px;
+  padding: 12px 20px;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.menu-list li a:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+.btn-primary {
+  display: inline-block;
+  background: var(--color-deep-indigo);
+  color: var(--color-pure-white);
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: var(--btn-radius);
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  text-decoration: none;
+  transition: background 0.3s;
+  box-shadow: 0 5px 0 #0d0a2a;
+  font-family: var(--font-family);
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background: #2a1a5c;
+}
+
+.btn-primary:active {
+  box-shadow: 0 2px 0 #0d0a2a;
+  transform: translateY(3px);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-lg {
+  padding: 18px 50px;
+  font-size: 22px;
+}
+
+/* ==========================================================================
+   PRICING CARDS
+   ========================================================================== */
+
+.pricing-card {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0;
+  overflow: visible;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: none;
+}
+
+.pricing-card.featured {
+  border: 3px solid #181042;
+  z-index: 2;
+  box-shadow: 0 10px 40px rgba(24,16,66,0.22);
+  animation: none;
+}
+
+.pricing-card-label {
+  background: #e8e8e8;
+  color: #181042;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.pricing-card-label.featured-label {
+  background: #181042;
+  color: #fff;
+  font-size: 14px;
+  padding: 14px 0;
+  letter-spacing: 2px;
+}
+
+.pricing-card-inner {
+  padding: 24px 22px 25px;
+  text-align: center;
+}
+
+.pricing-qty {
+  font-size: 28px;
+  font-weight: 900;
+  color: #181042;
+  margin-bottom: 2px;
+}
+
+.pricing-qty.featured-qty {
+  color: #181042;
+  font-size: 32px;
+}
+
+.pricing-supply {
+  font-size: 14px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.pricing-img {
+  max-width: 100%;
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  margin: 15px auto;
+  display: block;
+}
+
+.pricing-card.featured .pricing-img {
+  height: 160px;
+}
+
+.pricing-price {
+  margin: 10px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+}
+
+.price-dollar {
+  font-size: 24px;
+  font-weight: 800;
+  color: #181042;
+  line-height: 1.3;
+}
+
+.price-big {
+  font-size: 64px;
+  font-weight: 900;
+  color: #181042;
+  line-height: 1;
+}
+
+.price-per {
+  font-size: 16px;
+  color: #555;
+  text-align: left;
+  line-height: 1.3;
+  align-self: center;
+  font-weight: 500;
+}
+
+.pricing-savings {
+  color: #c62828;
+  font-weight: 800;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.pricing-checks {
+  margin: 16px auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  list-style: none;
+  border-top: 1px solid #eee;
+}
+
+.pricing-checks li {
+  font-size: 14px;
+  line-height: 1.3;
+  color: #333;
+  padding: 10px 0;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: none;
+  border-bottom: 1px solid #eee;
+  border-radius: 0;
+}
+
+.pricing-checks li:nth-child(2),
+.pricing-checks li:nth-child(3),
+.pricing-checks li:nth-child(4),
+.pricing-checks li:nth-child(5) {
+  background: none;
+}
+
+.check-icon {
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+  width: auto;
+  height: auto;
+  background: none;
+  border-radius: 0;
+  display: inline;
+  color: #181042;
+}
+
+.pricing-btn-wrapper {
+  position: relative;
+  margin-top: 5px;
+}
+
+.btn-featured {
+  font-size: 20px;
+  padding: 18px 20px;
+}
+
+.cursor-click-anim {
+  display: none;
+}
+
+.pricing-cards-img {
+  display: block;
+  max-width: 170px;
+  height: auto;
+  margin: 12px auto 0;
+}
+
+.pricing-bottom {
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.pricing-bottom-retail {
+  font-size: 16px;
+  color: #999;
+}
+
+.pricing-bottom-total {
+  font-size: 22px;
+  font-weight: 900;
+  color: #181042;
+}
+
+.pricing-bottom-shipping {
+  font-size: 13px;
+  color: #999;
+  margin-top: 2px;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  color: #c62828;
+}
+
+/* ==========================================================================
+   TRUST ICONS
+   ========================================================================== */
+
+.trust-icons-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  padding: 20px 0;
+}
+
+.trust-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ==========================================================================
+   TESTIMONIAL CARDS
+   ========================================================================== */
+
+.testimonial-card {
+  background: var(--color-pure-white);
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-stars {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.testimonial-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-deep-indigo);
+}
+
+.testimonial-verified {
+  color: #11b142;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* ==========================================================================
+   FAQ ACCORDION
+   ========================================================================== */
+
+.faq-item {
+  border: 2px solid var(--color-pearl-silver);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 18px 50px 18px 20px;
+  cursor: pointer;
+  position: relative;
+  font-weight: 600;
+  font-size: 18px;
+  background: var(--color-off-white);
+  border: none;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: inherit;
+  color: var(--color-deep-indigo);
+  transition: background 0.2s;
+}
+
+.faq-question:hover {
+  background: #ececf0;
+}
+
+.faq-toggle {
+  font-size: 24px;
+  font-weight: 400;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.faq-question.active .faq-toggle {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+.faq-answer p {
+  padding: 0 20px 20px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #555;
+}
+
+/* ==========================================================================
+   GUARANTEE SEAL & BADGES
+   ========================================================================== */
+
+.guarantee-seal {
+  flex-shrink: 0;
+}
+
+.seal-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--color-royal-purple);
+  color: var(--color-pure-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.seal-days {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.seal-text {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.seal-sub {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.guarantee-badges {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.guarantee-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--color-deep-indigo);
+}
+
+/* ==========================================================================
+   CLAIM CTA STRIP
+   ========================================================================== */
+
+.claim-strip {
+  background: var(--color-royal-purple);
+  padding: 35px 0 24px;
+  text-align: center;
+  color: var(--color-pure-white);
+}
+
+.claim-strip-heading {
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 50px;
+  color: var(--color-pure-white);
+}
+
+.claim-strip-act {
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 52px;
+  color: #fff000;
+  margin-top: 5px;
+}
+
+.claim-strip-act .claim-timer.stopwatch {
+  font-size: 64px;
+  font-weight: 900;
+  color: #fff000;
+  letter-spacing: 4px;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+}
+
+.claim-act-text {
+  animation: act-now-pulse 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes act-now-pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+/* ==========================================================================
+   STATUS STRIP (Sale Status / Stock Level / Spot Reserved)
+   ========================================================================== */
+
+.status-strip {
+  padding: 18px 0;
+  color: var(--color-pure-white);
+  background: linear-gradient(to right, var(--color-deep-indigo), #2a1660, var(--color-deep-indigo));
+}
+
+.status-strip-list {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.status-strip-list li {
+  padding: 0 22px;
+  position: relative;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--color-pure-white);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-strip-list li::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 6px;
+  height: 18px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.status-strip-list li:last-child::after {
+  display: none;
+}
+
+/* Green dot for Sale Status */
+.status-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #11b142;
+  margin-right: 4px;
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Hourglass icon with rotation */
+.hourglass-icon {
+  display: inline-block;
+  font-size: 18px;
+  animation: rotate-hourglass 2.5s ease-in-out infinite;
+}
+
+@keyframes rotate-hourglass {
+  0% { transform: rotate(0deg); }
+  40% { transform: rotate(180deg); }
+  100% { transform: rotate(180deg); }
+}
+
+.clock-icon {
+  font-size: 18px;
+}
+
+/* Stopwatch timer */
+.stopwatch {
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff000;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Blink animation for LOW */
+.blink {
+  color: #ff4444;
+  font-weight: 700;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.footer {
+  background: var(--color-deep-indigo);
+  padding: 40px 0;
+  color: var(--color-pure-white);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 56px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: var(--color-pearl-silver);
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--color-pure-white);
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.footer-disclaimer {
+  text-align: left;
+  font-size: 12px;
+  color: var(--color-pearl-silver);
+  line-height: 20px;
+  max-width: 100%;
+  margin: 0 auto 15px;
+}
+
+.footer-contact {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-pearl-silver);
+}
+
+.footer-contact a {
+  color: var(--color-soft-lavender);
+}
+
+/* ClickBank footer support line */
+.footer-support {
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-pearl-silver);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.footer-support a {
+  color: var(--color-soft-lavender);
+  font-weight: 700;
+}
