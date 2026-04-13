@@ -51,7 +51,11 @@
     .box-6-bottle { border: 3px solid #D94A3D !important; }
     .pricec { color: #D94A3D !important; }
   </style>
-</head>
+<style>
+      /* Override body/html overflow-x para nao quebrar position:sticky do banner */
+      html, body { overflow-x: clip !important; }
+    </style>
+  </head>
   <body class="content is-size-4 is-size-4-touch is-unselectable">
     <section class="section green-solid-background is-paddingless">
       <div class="container container-limit-u p-3 has-text-centered" style="font-size:0;">
@@ -85,6 +89,9 @@
       </div>
     </div>
     <div style="border-bottom: 2px solid #aeaeae;"></div>
+    <div style="background:#181042;padding:13px 16px;text-align:center;width:100%;position:sticky;top:0;z-index:9999;">
+      <p style="font-family:'Nunito Sans',sans-serif;font-size:16px;font-weight:700;color:#fff;line-height:1.4;margin:0;">⚠️ WAIT — Your Order Is Not Complete</p>
+    </div>
     <section class="section pt-4">
       <div class="container container-limit-u">
         <p class="has-text-centered is-size-2 is-size-3-touch has-text-weight-bold lh1 mb-3">
@@ -118,7 +125,7 @@
           </p>
         </div>
         <p class="block-11 pb-0 mb-0 has-text-centered">
-          <b>Here's what you'll experience with Glucolyn Gummie <b style="color: #4B2E8C;">the perfect complement to Nervecell:</b></b>
+          <b>Here's what you'll experience with Glucolyn Gummy <b style="color: #4B2E8C;">the perfect complement to Nervecell:</b></b>
         </p>
         <style>
           .lmargin { display: flex; flex-direction: column; gap: 15px; }
@@ -281,7 +288,7 @@
     <section class="section pt-4">
       <div class="container container-limit-u">
         <p class="is-size-2 is-size-3-mobile lh1">
-          <b style="color:red;">WARNING:</b> I only have a <u class="yellowunder" style="color:red;"><b>limited number</b></u> of Glucolyn Gummie bottles available at this exclusive discount. If you decline this offer now, you will not be able to return to claim this special deal.
+          <b style="color:red;">WARNING:</b> I only have a <u class="yellowunder" style="color:red;"><b>limited number</b></u> of Glucolyn Gummy bottles available at this exclusive discount. If you decline this offer now, you will not be able to return to claim this special deal.
         </p>
         <div class="columns mb-5">
           <div class="column">
@@ -294,9 +301,9 @@
                   <picture><img src="images/rating.png" width="90"></picture> 5/5
                 </p>
                 <p class="mb-2 is-size-5 lh1">
-                  <picture><img src="images/quote.jpg" width="29" style="padding-right:10px;"></picture>I almost passed on Glucolyn Gummie, thinking I didn't really need it &#8212; but I'm so glad I gave it a shot. My energy is steadier, the discomfort I used to feel every day has calmed down so much, and I finally feel like my body is working with me instead of against me.
+                  <picture><img src="images/quote.jpg" width="29" style="padding-right:10px;"></picture>I almost passed on Glucolyn Gummy, thinking I didn't really need it &#8212; but I'm so glad I gave it a shot. My energy is steadier, the discomfort I used to feel every day has calmed down so much, and I finally feel like my body is working with me instead of against me.
                 </p>
-                <p class="is-size-6 mb-0 lh1"><b>Daniel R.</b> - Verified Glucolyn Gummie User</p>
+                <p class="is-size-6 mb-0 lh1"><b>Daniel R.</b> - Verified Glucolyn Gummy User</p>
               </div>
             </div>
           </div>
@@ -310,9 +317,9 @@
                   <picture><img src="images/rating.png" width="90"></picture> 5/5
                 </p>
                 <p class="mb-2 is-size-5 lh1">
-                  <picture><img src="images/quote.jpg" width="29" style="padding-right:10px;"></picture> I thought my NerveCell routine was already good enough, but Glucolyn Gummie completely changed the game for me. I feel more balanced, more focused, and the uncomfortable sensations I used to live with are so much calmer now.
+                  <picture><img src="images/quote.jpg" width="29" style="padding-right:10px;"></picture> I thought my NerveCell routine was already good enough, but Glucolyn Gummy completely changed the game for me. I feel more balanced, more focused, and the uncomfortable sensations I used to live with are so much calmer now.
                 </p>
-                <p class="is-size-6 mb-0 lh1"><b>Marcus T.</b> - Verified Glucolyn Gummie User</p>
+                <p class="is-size-6 mb-0 lh1"><b>Marcus T.</b> - Verified Glucolyn Gummy User</p>
               </div>
             </div>
           </div>
@@ -327,9 +334,9 @@
                 <picture><img src="images/rating.png" width="90"></picture> 5/5
               </p>
               <p class="mb-2 is-size-5 lh1">
-                <picture><img src="images/quote.jpg" width="29" style="padding-right:10px;"></picture> NerveCell gave me the nerve support I needed, but Glucolyn Gummie eliminated the blood sugar swings that had been quietly making everything worse. Together? They're unstoppable.
+                <picture><img src="images/quote.jpg" width="29" style="padding-right:10px;"></picture> NerveCell gave me the nerve support I needed, but Glucolyn Gummy eliminated the blood sugar swings that had been quietly making everything worse. Together? They're unstoppable.
               </p>
-              <p class="is-size-6 mb-0 lh1"><b>Linda T.</b> - Verified Glucolyn Gummie User</p>
+              <p class="is-size-6 mb-0 lh1"><b>Linda T.</b> - Verified Glucolyn Gummy User</p>
             </div>
           </div>
         </div>
@@ -485,8 +492,8 @@
           <a href="/dw2/" class="flightPop is-capitalized" style="color:red;text-decoration:underline;"><b>No Thanks.</b></a>
           <b> I'll just use Nervecell alone for now and manage my blood sugar separately.</b>
           <div class="notification is-danger mt-5">
-            <p class="has-text-centered is-size-2 is-size-3-touch lh1 mb-3 yellowtext" style="color: #ffe400;"><b>Remember, Due To Limited Supply Of Discounted Glucolyn Gummie Bottles&#8230;</b></p>
-            <p>once you exit this page, <b> you won't be able to come back</b> and claim this deal. This offer is available only to <b>new customers of Nervecell</b>- and only for a <b>very limited time. Click the yellow button above</b> to claim your exclusive discount on Glucolyn Gummie while it's still available!</p>
+            <p class="has-text-centered is-size-2 is-size-3-touch lh1 mb-3 yellowtext" style="color: #ffe400;"><b>Remember, Due To Limited Supply Of Discounted Glucolyn Gummy Bottles&#8230;</b></p>
+            <p>once you exit this page, <b> you won't be able to come back</b> and claim this deal. This offer is available only to <b>new customers of Nervecell</b>- and only for a <b>very limited time. Click the yellow button above</b> to claim your exclusive discount on Glucolyn Gummy while it's still available!</p>
           </div>
         </p>
       </div>
@@ -495,13 +502,13 @@
     <div style="display:none;">
       <div id="loadModal-lastchance">
         <p class="has-text-weight-bold is-size-2 mt-3 is-size-3-touch mb-2 has-text-centered lh1" style="color:mediumvioletred">ARE YOU SURE?</p>
-        <p class=" has-text-weight-bold lh1 mb-3 has-text-centered">If you leave this page, you'll lose your <u> only chance</u> to get <u>5 bottles of Glucolyn Gummie (Buy 3 + Get 2 FREE)</u> &#8212; our premium blood sugar support formula &#8212; for just <u>$147 total (only $49 per bottle)!</u></p>
+        <p class=" has-text-weight-bold lh1 mb-3 has-text-centered">If you leave this page, you'll lose your <u> only chance</u> to get <u>5 bottles of Glucolyn Gummy (Buy 3 + Get 2 FREE)</u> &#8212; our premium blood sugar support formula &#8212; for just <u>$147 total (only $49 per bottle)!</u></p>
         <p class="has-text-centered mb-1">
           <picture><img src="images/glucolyn-6.webp" width="200" alt=""></picture>
         </p>
         <div class="notification mb-2">
           <p class="lh1 mb-0 has-text-centered is-capitalized is-size-5">
-            <b class="thorn">Check the green box, and hit the orange button</b> to lock in your special discount on Glucolyn Gummie while supplies last!
+            <b class="thorn">Check the green box, and hit the orange button</b> to lock in your special discount on Glucolyn Gummy while supplies last!
           </p>
         </div>
         <div class="rebill-clickbox mb-2" id="AddToOrder">
@@ -510,12 +517,12 @@
               <span class="rebill-checkbox2 pulsing2 rb-rb">.</span>
             </span>
           </div>
-          <div class="is-size-4 has-text-weight-bold lh1 mb-2">Yes! Give Me 5 Bottles of Glucolyn Gummie (Buy 3 + Get 2 FREE) for Just $147! </div>
-          <div class="is-size-7 has-text-justified lh1">By checking this box, I understand that this is my ONLY chance to get Glucolyn Gummie &#8212; the powerful blood sugar support formula &#8212; at the special one-time price of just $49 per bottle (pay for 3, receive 5 total for $147), with no subscription, no auto-ship, and no hidden charges. I also understand that once I leave this page, I may have to pay the full retail price per bottle in the future &#8212; and possibly shipping costs too. This is a final chance to stock up on Glucolyn Gummie and support healthy blood sugar levels while it's still massively discounted.</div>
+          <div class="is-size-4 has-text-weight-bold lh1 mb-2">Yes! Give Me 5 Bottles of Glucolyn Gummy (Buy 3 + Get 2 FREE) for Just $147! </div>
+          <div class="is-size-7 has-text-justified lh1">By checking this box, I understand that this is my ONLY chance to get Glucolyn Gummy &#8212; the powerful blood sugar support formula &#8212; at the special one-time price of just $49 per bottle (pay for 3, receive 5 total for $147), with no subscription, no auto-ship, and no hidden charges. I also understand that once I leave this page, I may have to pay the full retail price per bottle in the future &#8212; and possibly shipping costs too. This is a final chance to stock up on Glucolyn Gummy and support healthy blood sugar levels while it's still massively discounted.</div>
         </div>
         <p class="has-text-centered mb-4">
           <a class="confirm-rebill is-uppercase is-capitalized lh1 has-text-weight-bold yellow-button is-fullwidth" href="#" data-checkout="up2-3bt">
-            <span>YES! SEND ME 5 BOTTLES OF Glucolyn Gummie FOR JUST $147 (BUY 3 + GET 2 FREE) </span>
+            <span>YES! SEND ME 5 BOTTLES OF Glucolyn Gummy FOR JUST $147 (BUY 3 + GET 2 FREE) </span>
             <br>
           </a>
         </p>

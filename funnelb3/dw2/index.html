@@ -123,6 +123,9 @@
         </div>
       </div>
     </section>
+    <div style="background:#181042;padding:13px 16px;text-align:center;width:100%;position:sticky;top:0;z-index:100;">
+      <p style="font-family:'Nunito Sans',sans-serif;font-size:16px;font-weight:700;color:#fff;line-height:1.4;margin:0;">⚠️ WAIT — Your Order Is Not Complete</p>
+    </div>
     <section class="hero">
       <div class="w-layout-blockcontainer container w-container">
         <div class="hero-div">
@@ -158,93 +161,106 @@
             });
           </script>
 
-          <!-- PRICING CARDS -->
+          <!-- 3-OPTION OFFER CARDS -->
+          <div class="potes-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 30px 0;">
+
+            <!-- Option 1 - Starter Pack (3bt) -->
+            <div class="card" style="border: 2px solid #ddd; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+              <div class="card-tittle" style="background: #4B2E8C; padding: 12px;">
+                <h4 class="center-text white" style="margin: 0;">
+                  <b>STARTER PACK</b>
+                </h4>
+              </div>
+              <div class="card-content" style="padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 12px; flex: 1;">
+                <div>
+                  <h2 class="center-text gray-dark" style="margin: 0;">Buy 1 Get 2 FREE</h2>
+                  <h4 class="center-text gray-dark" style="margin: 4px 0;">3 Bottles — 90-Day Supply</h4>
+                </div>
+                <img src="images/glucolyn-3.webp" loading="lazy" alt="Glucolyn 3 Bottles" class="image" style="max-height: 150px; height: 100%; width: auto;">
+                <div>
+                  <h1 class="center-text" style="color: #2e7d32; margin: 0;">$49</h1>
+                  <h4 class="center-text" style="margin: 4px 0;">(~$16/bottle)</h4>
+                </div>
+                <div style="text-align: center; font-size: 14px; line-height: 1.6;">
+                  <span>&#128737; 60-Day Guarantee</span><br>
+                  <span>&#128666; Free Priority Shipping</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px; width: 100%; margin-top: auto;">
+                  <a href="#" data-checkout="dw2-3bt" class="button w-button" style="text-align: center;">Buy Now</a>
+                  <img src="images/cards_1cards.avif" loading="lazy" alt="Payment Methods" class="image-2" style="display: block; margin: 0 auto; max-width: 200px;">
+                </div>
+              </div>
+            </div>
+
+            <!-- Option 2 - Most Popular (5bt) -->
+            <div class="card variant" style="border: 3px solid #ff6f00; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transform: scale(1.04); box-shadow: 0 4px 20px rgba(255,111,0,0.25);">
+              <div class="card-tittle variant" style="background: #ff6f00; padding: 12px;">
+                <h4 class="center-text white" style="margin: 0;">
+                  <b>&#11088; MOST POPULAR — BEST VALUE!</b>
+                </h4>
+              </div>
+              <div class="card-content" style="padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 12px; flex: 1;">
+                <div>
+                  <h2 class="center-text" style="color: #ff6f00; margin: 0;">Buy 2 Get 3 FREE</h2>
+                  <h4 class="center-text gray-dark" style="margin: 4px 0;">5 Bottles — 150-Day Supply</h4>
+                </div>
+                <img src="images/buy3-get2-glucolyn.png" loading="lazy" alt="Glucolyn 5 Bottles" class="image" style="max-height: 150px; height: 100%; width: auto;">
+                <div>
+                  <h1 class="center-text" style="color: #ff6f00; margin: 0;">$87</h1>
+                  <h4 class="center-text" style="margin: 4px 0;">(~$17/bottle)</h4>
+                </div>
+                <div style="text-align: center; font-size: 14px; line-height: 1.6;">
+                  <span>&#128737; 60-Day Guarantee</span><br>
+                  <span>&#128666; Free Priority Shipping</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px; width: 100%; margin-top: auto;">
+                  <a href="#" data-checkout="dw2-5bt" class="button w-button" style="text-align: center;">Buy Now</a>
+                  <img src="images/cards_1cards.avif" loading="lazy" alt="Payment Methods" class="image-2" style="display: block; margin: 0 auto; max-width: 200px;">
+                </div>
+              </div>
+            </div>
+
+            <!-- Option 3 - Ultimate Supply (7bt) -->
+            <div class="card" style="border: 2px solid #ddd; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+              <div class="card-tittle" style="background: #4B2E8C; padding: 12px;">
+                <h4 class="center-text white" style="margin: 0;">
+                  <b>ULTIMATE SUPPLY</b>
+                </h4>
+              </div>
+              <div class="card-content" style="padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 12px; flex: 1;">
+                <div>
+                  <h2 class="center-text gray-dark" style="margin: 0;">Buy 4 Get 3 FREE</h2>
+                  <h4 class="center-text gray-dark" style="margin: 4px 0;">7 Bottles — 7+ Months</h4>
+                </div>
+                <img src="images/buy4-get3-glucolyn.png" loading="lazy" alt="Glucolyn 7 Bottles" class="image" style="max-height: 150px; height: 100%; width: auto;">
+                <div>
+                  <h1 class="center-text" style="color: #2e7d32; margin: 0;">$147</h1>
+                  <h4 class="center-text" style="margin: 4px 0;">(~$21/bottle)</h4>
+                </div>
+                <div style="text-align: center; font-size: 14px; line-height: 1.6;">
+                  <span>&#128737; 60-Day Guarantee</span><br>
+                  <span>&#128666; Free Priority Shipping</span>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px; width: 100%; margin-top: auto;">
+                  <a href="#" data-checkout="dw2-7bt" class="button w-button" style="text-align: center;">Buy Now</a>
+                  <img src="images/cards_1cards.avif" loading="lazy" alt="Payment Methods" class="image-2" style="display: block; margin: 0 auto; max-width: 200px;">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Responsive: stack cards on mobile -->
           <style>
-            .gl-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 36px 0 0; max-width: 920px; margin-left: auto; margin-right: auto; }
-            .gl-card { position: relative; background: #fff; border: 1px solid #ccc; display: flex; flex-direction: column; }
-            .gl-card:first-child { border-radius: 10px 0 0 10px; }
-            .gl-card:last-child { border-radius: 0 10px 10px 0; }
-            .gl-card--featured { background: #fff; border: 3px solid #181042; z-index: 2; border-radius: 10px !important; margin: -14px -1px; box-shadow: 0 10px 40px rgba(24,16,66,0.22); }
-            .gl-card__label { padding: 12px 16px; text-align: center; text-transform: uppercase; font-size: 13px; font-weight: 800; letter-spacing: 1.5px; color: #181042; background: #e8e8e8; }
-            .gl-card--featured .gl-card__label { background: #181042; color: #fff; padding: 14px 16px; font-size: 14px; letter-spacing: 2px; border-radius: 7px 7px 0 0; }
-            .gl-card__body { padding: 26px 22px; display: flex; flex-direction: column; align-items: center; flex: 1; }
-            .gl-card__offer { font-size: 19px; font-weight: 800; color: #181042; text-align: center; margin: 0 0 2px; }
-            .gl-card--featured .gl-card__offer { font-size: 22px; }
-            .gl-card__supply { font-size: 13px; color: #666; text-align: center; margin: 0 0 16px; font-weight: 500; }
-            .gl-card__img { display: block; max-height: 130px; width: auto; margin: 0 auto 18px; object-fit: contain; }
-            .gl-card--featured .gl-card__img { max-height: 155px; }
-            .gl-card__price { font-size: 38px; font-weight: 900; color: #181042; text-align: center; line-height: 1; }
-            .gl-card--featured .gl-card__price { font-size: 46px; }
-            .gl-card__perbt { font-size: 14px; color: #555; text-align: center; margin: 4px 0 14px; font-weight: 500; }
-            .gl-card__perks { list-style: none; padding: 0; margin: 0 0 18px; width: 100%; }
-            .gl-card__perks li { font-size: 13px; color: #444; padding: 6px 0; text-align: center; font-weight: 500; }
-            .gl-card__perks li + li { border-top: 1px solid #eee; }
-            .gl-card__cta { display: block; width: 100%; padding: 14px 0; text-align: center; font-size: 16px; font-weight: 800; letter-spacing: 0.5px; border: none; border-radius: 6px; cursor: pointer; text-decoration: none; transition: all 0.2s; margin-top: auto; }
-            .gl-card__cta--default { background: #fff; color: #181042; border: 2px solid #181042; }
-            .gl-card__cta--default:hover { background: #181042; color: #fff; }
-            .gl-card__cta--primary { background: #181042; color: #fff; border: 2px solid #181042; }
-            .gl-card__cta--primary:hover { background: #0d0a2a; }
-            .gl-card__payments { display: block; margin: 12px auto 0; max-width: 170px; }
-            .gl-card__badge { position: absolute; top: -32px; left: 50%; transform: translateX(-50%) rotate(-2deg); background: #e8c31e; color: #181042; font-size: 13px; font-weight: 900; text-transform: uppercase; letter-spacing: 1.5px; padding: 7px 22px 7px 20px; white-space: nowrap; z-index: 3; clip-path: polygon(4% 0%, 96% 0%, 100% 50%, 96% 100%, 4% 100%, 0% 50%); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-            .gl-cards { padding-top: 20px; }
             @media (max-width: 768px) {
-              .gl-cards { grid-template-columns: 1fr; gap: 16px; padding: 0 8px; }
-              .gl-card, .gl-card:first-child, .gl-card:last-child { border-radius: 10px !important; }
-              .gl-card--featured { margin: 0; order: -1; }
+              .potes-grid {
+                grid-template-columns: 1fr !important;
+              }
+              .card.variant {
+                transform: none !important;
+              }
             }
           </style>
-
-          <div class="gl-cards">
-            <div class="gl-card">
-              <div class="gl-card__label">Starter Pack</div>
-              <div class="gl-card__body">
-                <p class="gl-card__offer">Buy 1 Get 2 FREE</p>
-                <p class="gl-card__supply">3 Bottles &mdash; 90-Day Supply</p>
-                <img src="images/glucolyn-3.webp" loading="lazy" alt="Glucolyn 3 Bottles" class="gl-card__img">
-                <div class="gl-card__price">$49</div>
-                <div class="gl-card__perbt">(~$16/bottle)</div>
-                <ul class="gl-card__perks">
-                  <li>&#128737;&#65039; 60-Day Guarantee</li>
-                  <li>&#128666; Free Priority Shipping</li>
-                </ul>
-                <a href="#" data-checkout="dw2-3bt" class="gl-card__cta gl-card__cta--default">Buy Now</a>
-                <img src="images/cards_1cards.avif" loading="lazy" alt="Payment Methods" class="gl-card__payments">
-              </div>
-            </div>
-            <div class="gl-card gl-card--featured">
-              <span class="gl-card__badge">Best Value</span>
-              <div class="gl-card__label">&#11088; Most Popular</div>
-              <div class="gl-card__body">
-                <p class="gl-card__offer">Buy 2 Get 3 FREE</p>
-                <p class="gl-card__supply">5 Bottles &mdash; 150-Day Supply</p>
-                <img src="images/buy3-get2-glucolyn.png" loading="lazy" alt="Glucolyn 5 Bottles" class="gl-card__img">
-                <div class="gl-card__price">$87</div>
-                <div class="gl-card__perbt">(~$17/bottle)</div>
-                <ul class="gl-card__perks">
-                  <li>&#128737;&#65039; 60-Day Guarantee</li>
-                  <li>&#128666; Free Priority Shipping</li>
-                </ul>
-                <a href="#" data-checkout="dw2-5bt" class="gl-card__cta gl-card__cta--primary">Buy Now</a>
-                <img src="images/cards_1cards.avif" loading="lazy" alt="Payment Methods" class="gl-card__payments">
-              </div>
-            </div>
-            <div class="gl-card">
-              <div class="gl-card__label">Ultimate Supply</div>
-              <div class="gl-card__body">
-                <p class="gl-card__offer">Buy 4 Get 3 FREE</p>
-                <p class="gl-card__supply">7 Bottles &mdash; 7+ Months</p>
-                <img src="images/buy4-get3-glucolyn.png" loading="lazy" alt="Glucolyn 7 Bottles" class="gl-card__img">
-                <div class="gl-card__price">$147</div>
-                <div class="gl-card__perbt">(~$21/bottle)</div>
-                <ul class="gl-card__perks">
-                  <li>&#128737;&#65039; 60-Day Guarantee</li>
-                  <li>&#128666; Free Priority Shipping</li>
-                </ul>
-                <a href="#" data-checkout="dw2-7bt" class="gl-card__cta gl-card__cta--default">Buy Now</a>
-                <img src="images/cards_1cards.avif" loading="lazy" alt="Payment Methods" class="gl-card__payments">
-              </div>
-            </div>
-          </div>
 
           <!-- Refusal link -->
           <div style="text-align: center; margin: 28px 0 30px;">
